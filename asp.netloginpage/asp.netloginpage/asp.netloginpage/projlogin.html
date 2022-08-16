@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        body{
+            background-color:wheat;
+        }
+
+        .topnav {
+            text-decoration: none;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            background-color: black;
+            height: 46px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+            .topnav a {
+                color:white;
+                list-style:none;
+                text-decoration:none;
+                padding: 13px 0 0 0;
+            }
+
+            @-webkit-keyframes fade {
+                from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        #form1 {
+            display:none;
+        }
+
+        #form {
+            margin-top:50px;
+            width:500px;
+            height: 150px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+            #form h2 {
+                text-align:center;
+            }
+
+            #form small {
+                margin-top:5px;
+            }
+
+            #form button {
+                width:70px;
+                height:20px;
+                margin-top: 10px;
+            }
+
+        .container {
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+        }
+    </style>
+</head>
+<body id="projects">
+    <form id="form">
+        <h2>Please Login To Proceed</h2>
+        <div class="container"> 
+            <small>
+            <label>Username : </label> 
+            <input type="text" id="username" placeholder="Enter Username" name="username" required></input>
+            </small>
+            <small>
+            <label>Password : </label> 
+            <input type="password" id="password" placeholder="Enter Password" name="password" required></input>
+            </small>
+            <button type="submit" onclick="logauth()">Login</button>  
+        </div> 
+    </form> 
+
+    
+</body>
+    <script>
+        const allocation = document.getElementById("form1");
+
+        const login = document.getElementById("form");
+
+        const username = document.getElementById("#username").innerText;
+
+        const password = document.getElementById("#password").innerText;
+
+
+        function logauth() {
+
+            login.style.display = 'none';
+
+            allocation.style.display = 'block';
+        };
+    </script>
+</html>
+
+       
+       
+
+
+
+
+
+       
